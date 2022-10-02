@@ -57,6 +57,7 @@ passport.use('local.login', new localStrategy({
 }, (req,username,password, done)=> {
 
     //find user
+    
     User.findOne({email: username}, (err,user)=> {
 
         if (err) {
